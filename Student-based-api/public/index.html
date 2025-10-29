@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Student Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #00bfff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎓 Student Management</h1>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="course" placeholder="Course">
+    <input type="number" id="age" placeholder="Age">
+    <input type="text" id="city" placeholder="City">
+    <button id="addStudent">Add Student</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <!-- ✅ Script link MUST be at bottom -->
+    <script src="script.js"></script>
+</body>
+
+</html>
