@@ -1,6 +1,7 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
+const mongoose = require("mongoose");
+
 
 const app = express();
 
@@ -13,8 +14,9 @@ app.use(express.json());
 // ✅ Serve static files (frontend)
 app.use(express.static("public"));
 
+const mongouri = process.env.mongouri
 // ✅ Connect MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
+mongoose.connect(mongouri)
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.log("❌ MongoDB Error:", err));
 
